@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Pedido</title>
+  <link rel="stylesheet" href="/Styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Pedido</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="pedidos.html">Pedidos</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h2 id="form-title">Novo Pedido</h2>
+    <form id="pedido-form">
+      <label for="descricao">Descrição:</label>
+      <input type="text" id="descricao" name="descricao" required>
+
+      <label for="valor">Valor:</label>
+      <input type="number" id="valor" name="valor" step="0.01" required>
+
+      <label for="status">Status:</label>
+      <select id="status" name="status" required>
+        <option value="">Selecione...</option>
+        <option value="EM_PROCESSAMENTO">Em Processamento</option>
+        <option value="ENVIADO">Enviado</option>
+        <option value="ENTREGUE">Entregue</option>
+        <option value="CANCELADO">Cancelado</option>
+      </select>
+
+      <label for="cliente">Cliente:</label>
+      <select id="cliente" name="cliente" required>
+        <!-- Opções geradas dinamicamente -->
+      </select>
+
+      <button type="submit">Salvar Pedido</button>
+      <a href="pedidos.html">Cancelar</a>
+    </form>
+  </div>
+
+  <script src="scripts/pedido-form.js"></script>
+</body>
+</html>
